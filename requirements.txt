@@ -1,0 +1,12 @@
+Python=3.8
+playsound
+gTTS
+Pillow
+pytesseract
+opencv-python
+numpy
+pandas
+matplotlib
+Keras
+tensorflow
+face_recognition
