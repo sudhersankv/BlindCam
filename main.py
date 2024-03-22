@@ -17,6 +17,15 @@ mode=3
 count = 0
 import time
 
+def delete_generated_files():
+    # Delete generated frame images
+    for filename in glob.glob('frame*.jpg'):
+        os.remove(filename)
+    
+    # Delete generated mp3 files
+    for filename in glob.glob('output*.mp3'):
+        os.remove(filename)
+
 def cam():
     global mode
     global count
@@ -48,8 +57,11 @@ def cam():
             break
         time.sleep(.2)  # Wait for 1 seconds before capturing the next frame
         count += 1  # Increment count here, outside the if condition
+    
+
     cap.release()
     cv2.destroyAllWindows()
+    delete_generated_files()
 
 
 
