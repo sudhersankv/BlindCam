@@ -4,9 +4,6 @@ import cv2
 import numpy as np
 import sys
 from voice import *
-sys.path.append('../Module-1')
-from voice import *
-sys.path.append('../')
 
 pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 def textRecognition(filename):
